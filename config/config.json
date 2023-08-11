@@ -1,0 +1,7 @@
+{
+  "DB_USERNAME" : "rai",
+  "DB_PASSWORD" : "rai",
+  "DB_PORT" :  "5432",
+  "DB_HOST" :  "localhost",
+  "DB_NAME" :  "cognotiv_test"
+}
