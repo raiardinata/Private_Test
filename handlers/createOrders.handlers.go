@@ -4,6 +4,7 @@ import (
 	"log"
 	"net/http"
 	"os/exec"
+	"strings"
 
 	"private_test/models"
 
@@ -18,7 +19,7 @@ func CreateOrders(c echo.Context) error {
 	if err != nil {
 		log.Fatal(err)
 	}
-	order_id := string(newUUID[:])
+	order_id := strings.Replace(string(newUUID[:]), "\n", "", -1)
 
 	result, err := models.CreateOrders(customer_id, order_id, product_id)
 	if err != nil {

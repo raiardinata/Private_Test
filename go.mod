@@ -13,7 +13,6 @@ require (
 )
 
 require (
-	github.com/gocarina/gocsv v0.0.0-20230616125104-99d496ca653d
 	github.com/gocraft/dbr v0.0.0-20190714181702-8114670a83bd
 	github.com/labstack/echo v3.3.10+incompatible
 	github.com/labstack/gommon v0.4.0 // indirect
