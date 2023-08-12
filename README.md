@@ -46,10 +46,15 @@ CREATE TABLE Order_Products (
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 INSERT INTO customers(name, email, password) VALUES('sup_admin', 'admin@gmail.com', 'sup_admin');
+
 INSERT INTO products(name, price, description, image_url) VALUES('chairWhite', '1', 'normal chair, white color.', 'test.com/normalChairWhite.jpeg');
+
 INSERT INTO products(name, price, description, image_url) VALUES('chairBlack', '1', 'normal chair, black color.', 'test.com/normalChairBlack.jpeg');
+
 INSERT INTO products(name, price, description, image_url) VALUES('chairBlue', '1', 'normal chair, blue color.', 'test.com/normalChairBlue.jpeg');
+
 INSERT INTO Orders(customer_id, status) VALUES('ab2ea48e-180b-44e5-8909-6784e9a4a27b', 'fresh_order');
+
 INSERT INTO Order_Products(order_id, product_id) VALUES('b061d55a-559b-43a7-a5d0-87ca23fa181e', '152943cc-8c39-4bc1-b881-c6948f0391ca');
 
 2.
