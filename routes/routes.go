@@ -3,8 +3,10 @@ package routes
 import (
 	"net/http"
 	"sync"
+	"time"
 
 	"private_test/handlers"
+	sendemail "private_test/sendEmail"
 
 	"github.com/labstack/echo"
 	echo_middleware "github.com/labstack/echo/middleware"
@@ -63,6 +65,20 @@ func Init() *echo.Echo {
 	e.POST("/createOrders", handlers.CreateOrders)
 	e.GET("/getOrders", handlers.GetOrders)
 	e.GET("/exportOrder", handlers.ExportOrders)
+	e.GET("/sendEmail", handlers.SendEmail)
+
+	// Route to manually trigger the email sending (for testing purposes)
+	e.GET("/send_reminders", handlers.SendEmail)
+
+	go func() {
+		for {
+			// Replace this with your action to be performed every 24 hours
+			sendemail.SendEmail()
+
+			// Wait for 24 hours before executing the action again
+			time.Sleep(24 * time.Hour)
+		}
+	}()
 
 	return e
 }
