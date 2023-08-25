@@ -18,8 +18,8 @@ type CustomerID struct {
 const (
 	gmailSMTPHost     = "smtp.gmail.com"
 	gmailSMTPPort     = 587
-	gmailSMTPUsername = "semtepedetesyingsemtepede@gmail.com" // change it to your gmail email
-	gmailSMTPPassword = "iglkrkbvctetxtex"                    // change it to your gmail app password
+	gmailSMTPUsername = "" // change it to your gmail email
+	gmailSMTPPassword = ""                    // change it to your gmail app password
 )
 
 func sendReminderEmail(name, toEmail, products, checkoutURL string) error {
